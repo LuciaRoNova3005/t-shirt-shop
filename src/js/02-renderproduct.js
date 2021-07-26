@@ -8,11 +8,12 @@ const getProductHtmlCode = (product) => {
   htmlCode += `</article>`;
   return htmlCode;
 };
-const paintProducts = () => {
+const renderProducts = () => {
   let productsCode = "";
   for (const product of products) {
     productsCode += getProductHtmlCode(product);
   }
   const productsElement = document.querySelector(".js-products");
   productsElement.innerHTML = productsCode;
+  listenAddProductsBtns();
 };
