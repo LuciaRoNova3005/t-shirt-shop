@@ -1,1 +1,1 @@
-const product = [];
+let product = [];
