@@ -1,42 +1,19 @@
-const listenAddProductsBtns = () => {
-  const productsBtns = document.querySelectorAll(".js-add-product");
-  for (const productBtn of productsBtns) {
-    productBtn.addEventListener("click", incProductQuantity);
+const paintProducts = () => {
+  let productsCode = "";
+  for (const product of products) {
+    productsCode += getProductHtmlCode(product);
   }
+  const productsElement = document.querySelector(".js-products");
+  productsElement.innerHTML = productsCode;
 };
-const incProductQuantity = (ev) => {
-  const clickedId = ev.target.dataset.id;
 
-  let foundItem = findInArray(clickedId, cart);
-  if (foundItem === undefined) {
-    let foundProduct = findInArray(clickedId, products);
-
-    cart.push({
-      id: foundProduct.id,
-      name: foundProduct.name,
-      price: foundProduct.price,
-      quantity: 1,
-    });
-  } else {
-    foundItem.quantity += 1;
-  }
-
-  setInLocalStorage();
-  paintCartItems();
-};
-const decProductQuantity = (ev) => {
-  const clickedId = ev.target.dataset.id;
-
-  let foundItem = findInArray(clickedId, cart);
-
-  if (foundItem.quantity > 1) {
-    foundItem.quantity -= 1;
-  } else {
-    let foundIndex = findIndexInArray(clickedId, cart);
-
-    cart.splice(foundIndex, 1);
-  }
-
-  setInLocalStorage();
-  paintCartItems();
+const getProductHtmlCode = (product) => {
+  let htmlCode = "";
+  htmlCode += `<article class="card">`;
+  htmlCode += `  <img src="${product.imageUrl}" class="card__img" alt="Producto: ${product.name}">`;
+  htmlCode += `  <h3 class="card__title">${product.name}</h3>`;
+  htmlCode += `  <p class="card__description">${product.price} €</p>`;
+  htmlCode += `  <button class="js-add-product card__btn" data-id="${product.id}">Añadir a la cesta</button>`;
+  htmlCode += `</article>`;
+  return htmlCode;
 };
