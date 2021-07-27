@@ -1,1 +1,2 @@
 let product = [];
+let cart = [];
