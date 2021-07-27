@@ -1,3 +1,12 @@
+const paintProducts = () => {
+  let productsCode = "";
+  for (const product of products) {
+    productsCode += getProductHtmlCode(product);
+  }
+  const productsElement = document.querySelector(".js-products");
+  productsElement.innerHTML = productsCode;
+};
+
 const getProductHtmlCode = (product) => {
   let htmlCode = "";
   htmlCode += `<article class="card">`;
@@ -7,13 +16,4 @@ const getProductHtmlCode = (product) => {
   htmlCode += `  <button class="js-add-product card__btn" data-id="${product.id}">Añadir a la cesta</button>`;
   htmlCode += `</article>`;
   return htmlCode;
-};
-const renderProducts = () => {
-  let productsCode = "";
-  for (const product of products) {
-    productsCode += getProductHtmlCode(product);
-  }
-  const productsElement = document.querySelector(".js-products");
-  productsElement.innerHTML = productsCode;
-  listenAddProductsBtns();
 };
