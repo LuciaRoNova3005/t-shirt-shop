@@ -42,14 +42,11 @@ const paintCartItems = () => {
   listenCartBtns();
 };
 
-const listenCartBtns = () => {
-  const cartIncBtns = document.querySelectorAll(".js-inc-btn");
-  for (const caritIncBtn of cartIncBtns) {
-    caritIncBtn.addEventListener("click", incProductQuantity);
-  }
+const listenAddProductsBtns = () => {
+  listenEvents(".js-add-product", incProductQuantity);
+};
 
-  const cartDecBtns = document.querySelectorAll(".js-dec-btn");
-  for (const cartDecBtn of cartDecBtns) {
-    cartDecBtn.addEventListener("click", decProductQuantity);
-  }
+const listenCartBtns = () => {
+  listenEvents(".js-inc-btn", incProductQuantity);
+  listenEvents(".js-dec-btn", decProductQuantity);
 };
