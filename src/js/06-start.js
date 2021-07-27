@@ -1,13 +1,3 @@
-const startApp = () => {
-  getApiData().then(() => {
-    paintProducts();
-    listenAddProductsBtns();
-  });
-  getFromLocalStorage();
-  paintCartItems();
-  listenCartBtns();
-};
-
 const incProductQuantity = (ev) => {
   const id = getClickedProductId(ev);
   if (isProductInCart(id)) {
@@ -30,3 +20,4 @@ const decProductQuantity = (ev) => {
   listenCartBtns();
 };
 startApp();
+getApiData();

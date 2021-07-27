@@ -4,13 +4,33 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Proyecto Spotify</title>
-    <link rel="stylesheet" href="./css/reset.css" />
+    <title>PRODUCT SHOP</title>
+
     <link rel="stylesheet" href="./assets/css/main.css" />
     <link rel="shortcut icon" href="./assets/images/favicon.png" />
   </head>
   <body>
-    
-    <script src="../js/main.js"></script>
+    <section>
+      <h2 class="title--medium">Listado de camisetas</h2>
+      <section class="js-products cards"></section>
+    </section>
+
+    <section>
+      <h2 class="title--medium">Cesta de la compra</h2>
+
+      <table class="table">
+        <thead>
+          <tr class="text--bold">
+            <td>Producto</td>
+            <td>Precio</td>
+            <td>Unidades</td>
+            <td class="text-align-right">Total</td>
+          </tr>
+        </thead>
+        <tbody class="js-cart"></tbody>
+      </table>
+    </section>
+
+    <script src="./assets/js/main.js"></script>
   </body>
 </html>
