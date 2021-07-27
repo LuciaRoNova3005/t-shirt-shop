@@ -1,3 +1,12 @@
+const paintCartItems = () => {
+  const cartElement = document.querySelector(".js-cart");
+  cartElement.innerHTML = "";
+  for (const item of cart) {
+    cartElement.innerHTML += getCartItemHtmlCode(item);
+  }
+  cartElement.innerHTML += getCartTotalHtmlCode();
+};
+
 const getCartItemHtmlCode = (item) => {
   let htmlCode = "";
   htmlCode += `<tr>`;
@@ -16,37 +25,20 @@ const getCartItemHtmlCode = (item) => {
 };
 
 const getCartTotalHtmlCode = () => {
+  const total = cart.reduce(
+    (total, item) => total + item.price * item.quantity,
+    0
+  );
   let htmlCode = "";
   htmlCode += `<tr class="text--bold">`;
   htmlCode += `  <td>Total</td>`;
-  htmlCode += `  <td colspan="3" class="text-align-right">${getTotalPrice()}€</td>`;
+  htmlCode += `  <td colspan="3" class="text-align-right">${total}€</td>`;
   htmlCode += `</tr>`;
   return htmlCode;
 };
-
-const getTotalPrice = () => {
-  let total = 0;
-  for (const item of cart) {
-    total += item.price * item.quantity;
+const listenEvents = (selector, handler, eventType = "click") => {
+  const elements = document.querySelectorAll(selector);
+  for (const element of elements) {
+    element.addEventListener(eventType, handler);
   }
-  return total;
-};
-
-const paintCartItems = () => {
-  const cartElement = document.querySelector(".js-cart");
-  cartElement.innerHTML = "";
-  for (const item of cart) {
-    cartElement.innerHTML += getCartItemHtmlCode(item);
-  }
-  cartElement.innerHTML += getCartTotalHtmlCode();
-  listenCartBtns();
-};
-
-const listenAddProductsBtns = () => {
-  listenEvents(".js-add-product", incProductQuantity);
-};
-
-const listenCartBtns = () => {
-  listenEvents(".js-inc-btn", incProductQuantity);
-  listenEvents(".js-dec-btn", decProductQuantity);
 };
