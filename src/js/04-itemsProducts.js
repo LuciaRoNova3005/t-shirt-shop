@@ -41,3 +41,15 @@ const paintCartItems = () => {
   cartElement.innerHTML += getCartTotalHtmlCode();
   listenCartBtns();
 };
+
+const listenCartBtns = () => {
+  const cartIncBtns = document.querySelectorAll(".js-inc-btn");
+  for (const caritIncBtn of cartIncBtns) {
+    caritIncBtn.addEventListener("click", incProductQuantity);
+  }
+
+  const cartDecBtns = document.querySelectorAll(".js-dec-btn");
+  for (const cartDecBtn of cartDecBtns) {
+    cartDecBtn.addEventListener("click", decProductQuantity);
+  }
+};

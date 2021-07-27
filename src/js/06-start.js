@@ -1,0 +1,3 @@
+getFromLocalStorage();
+getApiData();
+paintCartItems();
