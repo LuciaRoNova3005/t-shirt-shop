@@ -11,7 +11,7 @@
   text-align: center;
   color: #515e63;
   @include tablet {
-    font-size: 34px;
+    font-size: 36px;
   }
   @include desktop {
   }
@@ -30,6 +30,7 @@
   &__title3 {
     @include tablet {
       font-size: 25px;
+      margin: 20px;
     }
     @include desktop {
     }

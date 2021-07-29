@@ -39,7 +39,7 @@ const paintCartItems = () => {
 
 const getCartItemHtmlCode = (item) => {
   let htmlCode = "";
-  htmlCode += `<tr>`;
+  htmlCode += `<tr">`;
   htmlCode += `  <td>${item.name}</td>`;
   htmlCode += `  <td>${item.price}</td>`;
   htmlCode += `  <td class="button_shop">`;
