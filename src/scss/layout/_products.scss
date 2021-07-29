@@ -22,6 +22,10 @@
     border-style: solid;
     border-radius: 5px;
   }
+  @include tablet {
+  }
+  @include desktop {
+  }
   &__btn {
     color: #f1ecc3;
     margin-top: 10px;
