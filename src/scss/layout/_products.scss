@@ -1,8 +1,20 @@
+.container {
+  @include desktop {
+    display: flex;
+    justify-content: space-around;
+    margin: auto;
+  }
+}
 .title {
   font-size: 30px;
   font-weight: bold;
   text-align: center;
   color: #515e63;
+  @include tablet {
+    font-size: 34px;
+  }
+  @include desktop {
+  }
 }
 
 .cards {
@@ -15,17 +27,34 @@
   flex-direction: column;
   align-items: center;
   margin: 5px;
+  &__title3 {
+    @include tablet {
+      font-size: 25px;
+    }
+    @include desktop {
+    }
+  }
+  &__description {
+    @include tablet {
+      font-size: 25px;
+    }
+    @include desktop {
+    }
+  }
 
   &__img {
     width: 90px;
     border-width: 5px;
     border-style: solid;
     border-radius: 5px;
+    @include tablet {
+      width: auto;
+    }
+    @include desktop {
+      width: auto;
+    }
   }
-  @include tablet {
-  }
-  @include desktop {
-  }
+
   &__btn {
     color: #f1ecc3;
     margin-top: 10px;
@@ -33,5 +62,12 @@
     font-family: "Rubik", sans-serif;
     background-color: #515e63;
     border-radius: 30px;
+    @include tablet {
+      margin-top: 20px;
+      font-size: 25px;
+      padding: 10px;
+    }
+    @include desktop {
+    }
   }
 }
