@@ -1,0 +1,33 @@
+.title {
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  color: #515e63;
+}
+
+.cards {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 5px;
+
+  &__img {
+    width: 90px;
+    border-width: 5px;
+    border-style: solid;
+    border-radius: 5px;
+  }
+  &__btn {
+    color: #f1ecc3;
+    margin-top: 10px;
+    font-size: 16px;
+    font-family: "Rubik", sans-serif;
+    background-color: #515e63;
+    border-radius: 30px;
+  }
+}
