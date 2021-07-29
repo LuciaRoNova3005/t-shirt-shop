@@ -42,7 +42,7 @@ const getCartItemHtmlCode = (item) => {
   htmlCode += `<tr>`;
   htmlCode += `  <td>${item.name}</td>`;
   htmlCode += `  <td>${item.price}</td>`;
-  htmlCode += `  <td>`;
+  htmlCode += `  <td class="button_shop">`;
   htmlCode += `    <button class="js-dec-btn card__btn" data-id="${item.id}">-</button>`;
   htmlCode += `    ${item.quantity}`;
   htmlCode += `    <button class="js-inc-btn card__btn" data-id="${item.id}">+</button>`;
