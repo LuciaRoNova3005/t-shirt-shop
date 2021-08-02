@@ -10,6 +10,12 @@ Este proyecto incluye un motor de plantillas HTML, el preprocesador SASS...
 - La carpeta `src/`: son los ficheros de la página web, como HTML, CSS, JS...
 - Las carpetas `public/` y `docs/`, que son generadas automáticamente cuando arrancamos el proyecto. Lee los ficheros que hay dentro de `src/`, los procesa y los genera dentro de `public/` y `docs/`.
 
+### T2: Diagrama de flujo
+
+![Diagrama de flujo](https://user-images.githubusercontent.com/81588630/127904949-f1b2bd8b-b541-46f1-9778-56e515dab3c6.PNG)
+![Flujo](https://user-images.githubusercontent.com/81588630/127904985-3c6bc7a6-60d7-4c5f-925e-4bd802c881a1.PNG)
+
+
 ## Guía de inicio rápido
 
 > **NOTA:** Instalar previamente [Node JS](https://nodejs.org/) para trabajar con este repo:
