@@ -13,7 +13,7 @@ Este proyecto incluye un motor de plantillas HTML, el preprocesador SASS...
 ### T2: Diagrama de flujo
 
 ![Diagrama de flujo](https://user-images.githubusercontent.com/81588630/127904949-f1b2bd8b-b541-46f1-9778-56e515dab3c6.PNG)
-![Flujo](https://user-images.githubusercontent.com/81588630/127904985-3c6bc7a6-60d7-4c5f-925e-4bd802c881a1.PNG)
+
 
 
 ## Guía de inicio rápido
@@ -80,7 +80,7 @@ Son un atajo que nos genera la versión de producción y hace push de la carpeta
 
 Estas tareas de Gulp producen el siguiente flujo de archivos:
 
-![Gulp flow](./gulp-flow.png)
+![Flujo](https://user-images.githubusercontent.com/81588630/127904985-3c6bc7a6-60d7-4c5f-925e-4bd802c881a1.PNG)
 
 ## `gulpfile.js` y `config.json`
 
