@@ -1,20 +1,22 @@
-.shop {
-  margin-top: 40px;
-}
 .table {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
-
   &__head {
     display: flex;
     flex-direction: row;
     background-color: #ddd9c2;
-    opacity: 70px;
   }
 }
-
+td {
+  @include tablet {
+    width: 100px;
+  }
+  @include desktop {
+    width: 200px;
+  }
+}
 table tr td {
   padding: 30px;
   border-bottom: solid 1px #ccc;
@@ -24,6 +26,7 @@ table tr td {
   @include tablet {
     padding: 40px;
     font-size: 16px;
+    text-align: center;
   }
   @include desktop {
     padding: 50px;
@@ -33,6 +36,14 @@ table tr td {
 .title3 {
   font-weight: bold;
 }
-.text-align-right {
+
+.total {
   text-align: right;
+
+  @include tablet {
+    padding-right: 70px;
+  }
+  @include desktop {
+    padding-right: 120px;
+  }
 }

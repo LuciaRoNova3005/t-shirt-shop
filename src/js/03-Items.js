@@ -62,7 +62,7 @@ const getCartTotalHtmlCode = () => {
   let htmlCode = "";
   htmlCode += `<tr class="text--bold">`;
   htmlCode += `  <td>Total</td>`;
-  htmlCode += `  <td colspan="3" class="text-align-right">${total}€</td>`;
+  htmlCode += `  <td colspan="3" class="total">${total}€</td>`;
   htmlCode += `</tr>`;
   return htmlCode;
 };
