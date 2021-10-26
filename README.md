@@ -1,6 +1,15 @@
 # TIENDA DE CAMISETAS
 
-Este proyecto consite en la creación de una página de una tienda de camisetas en la que aparece un carrito de la compra / listado con los productos seleccionados usando javascript.
+Este proyecto consite en la creación de una página de una tienda de camisetas.
+
+![image](https://user-images.githubusercontent.com/81588630/138904869-d90373f2-c077-440b-bd37-704142259017.png)
+
+En la que aparece un carrito de la compra / listado con los productos seleccionados usando javascript. 
+Se pueden añadir o quitar los productos de la cesta de la compra y calcula el precio total.
+Además guarda la cesta en el local.
+
+![image](https://user-images.githubusercontent.com/81588630/138905414-b6af9b4c-a09c-435e-ac76-1dcc9e0c349e.png)
+
 
 Este proyecto incluye un motor de plantillas HTML, el preprocesador SASS...
 
