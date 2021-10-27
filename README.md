@@ -114,6 +114,7 @@ src
     └─ 01-paintProducst.js
     └─ 03-Items.js
     └─ 04-localstorage.js
+    └─ 05-start.js
     └─ main.js
  └─ scss
     └─ core
