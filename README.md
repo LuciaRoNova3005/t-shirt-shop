@@ -1,22 +1,22 @@
-# TIENDA DE CAMISETAS
+# SHIRT SHOP
 
-Este proyecto consite en la creación de una página de una tienda de camisetas.
+This project consists of creating a page for a t-shirt store.
 
 ![image](https://user-images.githubusercontent.com/81588630/138904869-d90373f2-c077-440b-bd37-704142259017.png)
 
-En la que aparece un carrito de la compra / listado con los productos seleccionados usando javascript. 
-Se pueden añadir o quitar los productos de la cesta de la compra y calcula el precio total.
-Además guarda la cesta en el local.
+In which a shopping cart / list appears with the products selected using javascript.
+You can add or remove the products from the shopping cart and calculate the total price.
+
+### INDEX
+
+1. [Data structure](#Data-structure)
+2. [Flowchart](#Flowchart)
+3. [Local Storage](#Local-storage)
+4. [About the proyect](#About-the-proyect)
 
 ![image](https://user-images.githubusercontent.com/81588630/138905414-b6af9b4c-a09c-435e-ac76-1dcc9e0c349e.png)
 
-
-Este proyecto incluye un motor de plantillas HTML, el preprocesador SASS...
-
-
-## Estructura de carpetas
-
-La estructura de carpetas:
+## 1.Data structure
 
 ```
 src
@@ -29,9 +29,10 @@ src
  ├─ js
     └─ 00-const.js
     └─ 01-paintProducst.js
-    └─ 03-Items.js
-    └─ 04-localstorage.js
-    └─ 05-start.js
+    └─ 02-Items.js
+    └─ 03-localstorage.js
+    └─ 04-start.js
+    └─ data.json
     └─ main.js
  └─ scss
     └─ core
@@ -39,57 +40,63 @@ src
     └─ main.scss
 ```
 
-# # Hay 3 tipos de ficheros y carpetas:
+## 2.Flowchart
 
-- Los ficheros que están sueltos en la raíz del repositorio, como gulpfile.js, package.json... Son la configuración del proyecto.
-- La carpeta `src/`: son los ficheros de la página web, como HTML, CSS, JS...
-- Las carpetas `public/` y `docs/`, que son generadas automáticamente cuando arrancamos el proyecto. Lee los ficheros que hay dentro de `src/`, los procesa y los genera dentro de `public/` y `docs/`.
+![Flowchart](https://user-images.githubusercontent.com/81588630/127904949-f1b2bd8b-b541-46f1-9778-56e515dab3c6.PNG)
 
-### T2: Diagrama de flujo
+## 3.Local Storage
 
-![Diagrama de flujo](https://user-images.githubusercontent.com/81588630/127904949-f1b2bd8b-b541-46f1-9778-56e515dab3c6.PNG)
+The shopping list must be stored in the local storage allowing the user to retrieve their shopping list
 
+## About the proyect
 
+This project includes an HTML template engine, the SASS preprocessor ...
 
-## Guía de inicio rápido
+### There are 3 types of files and folders:
 
-> **NOTA:** Instalar previamente [Node JS](https://nodejs.org/) para trabajar con este repo:
+- The files that are loose in the repository root, like gulpfile.js, package.json ... They are the project's configuration.
+- The `src /` folder: are the files of the web page, such as HTML, CSS, JS ...
+- The `public /` and `docs /` folders, which are automatically generated when we start the project. It reads the files inside `src /`, processes them and generates them inside `public /` and `docs /`
 
-### Pasos a seguir para arrancar el proyecto desde tu ordenador:
+## Quick Start Guide
 
-1. Crear un nuevo repositorio y añade los archivos descargados.
-1. **Abre una terminal** en la carpeta raíz de tu repositorio.
-1. **Instala las dependencias** locales ejecutando en la terminal el comando:
+> **NOTE:** Pre-install [Node JS] (https://nodejs.org/) to work with this repo:
+
+### Steps to follow to start the project from your computer:
+
+1. Create a new repository and add the downloaded files.
+2. ** Open a terminal ** in the root folder of your repository.
+3. ** Install the local dependencies ** by executing the command in the terminal:
 
 ```bash
 npm install
 ```
 
-Una vez hemos instalado las dependencias, vamos a arrancar el proyecto.
+Once we have installed the dependencies, we are going to start the project.
 
 ```bash
 npm start
 ```
 
-Este comando:
+This command:
 
-- **Abre una ventana de Chrome y muestra la página web**
-- También **observa** todos los ficheros que hay dentro de la carpeta `src/`, para que cada vez que modifiques un fichero **refresca tu página en Chrome**.
-- También **procesa los ficheros** HTML, SASS / CSS y JS y los **genera y guarda en la carpeta `public/`**. Por ejemplo:
+- **Open a Chrome window and show the web page**
+- Also **observe** all the files that are inside the `src /` folder, so that every time you modify a file **it refreshes your page in Chrome**.
+- It also **processes the** HTML, SASS / CSS and JS files and **generates and saves them in the `public /`** folder. For example:
 
-Después de ejecutar `npm start` ya puedes empezar a editar todos los ficheros que están dentro de la carpeta `src/` y programar cómodamente.
+After executing `npm start` you can start to edit all the files that are inside the`src /`folder and program comfortably.
 
-### Pasos para publicar el proyecto en GitHub Pages:
+### Steps to publish the project on GitHub Pages:
 
-Para generar la página para producción ejecuta el comando:
+To generate the page for production run the command:
 
 ```bash
 npm run docs
 ```
 
-Y a continuación:
+And then:
 
-1. Sube a tu repo la carpeta `docs/` que se te acaba de generar.
+1. Upload the `docs /` folder that was just generated to your repo.
 
 ```bash
 git add -A
@@ -97,7 +104,7 @@ git commit -m "commit message"
 git push
 ```
 
-Además, los comandos:
+Also, the commands:
 
 ```bash
 npm run push-docs
@@ -111,19 +118,18 @@ npm run deploy
 
 Son un atajo que nos genera la versión de producción y hace push de la carpeta `docs/`
 
-## Flujo de archivos con Gulp
+## File flow with Gulp
 
-Estas tareas de Gulp producen el siguiente flujo de archivos:
+These Gulp tasks produce the following file stream:
 
 ![Flujo](https://user-images.githubusercontent.com/81588630/127904985-3c6bc7a6-60d7-4c5f-925e-4bd802c881a1.PNG)
 
 ## `gulpfile.js` y `config.json`
 
-Nuestro **gulpfile.js** usa el fichero `config.json` de configuración con las rutas de los archivos a generar / observar.
+Our ** gulpfile.js ** uses the `config.json` configuration file with the paths of the files to generate / observe.
 
-De esta manera separarmos las acciones que están en `gulpfile.js` de la configuración de las acciones que están en `config.json`.
+In this way we separate the actions that are in `gulpfile.js` from the configuration of the actions that are in` config.json`.
 
+## Something is missing?
 
-## Falta algo?
-
-Cualquier duda,sugerencia o consejo será bien recibida!
+Any questions, suggestions or advice will be well received!
