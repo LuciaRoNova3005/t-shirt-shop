@@ -13,6 +13,32 @@ Además guarda la cesta en el local.
 
 Este proyecto incluye un motor de plantillas HTML, el preprocesador SASS...
 
+
+## Estructura de carpetas
+
+La estructura de carpetas:
+
+```
+src
+ ├─ api
+     └─ data.json
+ ├─ html
+   └─ partials
+   └─ index.html
+ ├─ images
+ ├─ js
+    └─ 00-const.js
+    └─ 01-paintProducst.js
+    └─ 03-Items.js
+    └─ 04-localstorage.js
+    └─ 05-start.js
+    └─ main.js
+ └─ scss
+    └─ core
+    └─ layout
+    └─ main.scss
+```
+
 # # Hay 3 tipos de ficheros y carpetas:
 
 - Los ficheros que están sueltos en la raíz del repositorio, como gulpfile.js, package.json... Son la configuración del proyecto.
@@ -97,30 +123,6 @@ Nuestro **gulpfile.js** usa el fichero `config.json` de configuración con las r
 
 De esta manera separarmos las acciones que están en `gulpfile.js` de la configuración de las acciones que están en `config.json`.
 
-## Estructura de carpetas
-
-La estructura de carpetas:
-
-```
-src
- ├─ api
-     └─ data.json
- ├─ html
-   └─ partials
-   └─ index.html
- ├─ images
- ├─ js
-    └─ 00-const.js
-    └─ 01-paintProducst.js
-    └─ 03-Items.js
-    └─ 04-localstorage.js
-    └─ 05-start.js
-    └─ main.js
- └─ scss
-    └─ core
-    └─ layout
-    └─ main.scss
-```
 
 ## Falta algo?
 
